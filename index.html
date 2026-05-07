@@ -24,7 +24,7 @@
         }
 
         .hero-section {
-            height: 90vh;
+            height: 80vh;
             background: radial-gradient(circle at center, var(--deep-blue) 0%, var(--dark-bg) 80%);
             display: flex;
             flex-direction: column;
@@ -49,6 +49,7 @@
             font-weight: 900;
             text-transform: uppercase;
             margin: 0;
+            padding: 0 20px;
             letter-spacing: -2px;
             text-shadow: 0 0 20px rgba(0, 242, 255, 0.6);
             animation: pulse 2s infinite alternate;
@@ -59,6 +60,7 @@
             color: var(--accent-cyan);
             font-weight: 700;
             margin-bottom: 20px;
+            padding: 0 20px;
         }
 
         .badge {
@@ -75,7 +77,7 @@
             max-width: 900px;
             margin: -50px auto 50px;
             padding: 20px;
-            background: rgba(0, 26, 61, 0.9);
+            background: rgba(0, 26, 61, 0.95);
             border: 1px solid var(--electric-blue);
             border-radius: 15px;
             backdrop-filter: blur(10px);
@@ -90,6 +92,7 @@
             text-transform: uppercase;
             border-bottom: 1px solid rgba(0, 242, 255, 0.3);
             padding-bottom: 10px;
+            margin-top: 40px;
         }
 
         .hype-cards {
@@ -116,7 +119,7 @@
         .prize-box {
             background: linear-gradient(45deg, #ffd700, #ff8c00);
             color: black;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
             border-radius: 10px;
             font-weight: 900;
@@ -125,32 +128,18 @@
             animation: glow 1.5s infinite;
         }
 
-        .form-placeholder {
-            background: #000;
-            padding: 40px;
-            border: 2px dashed #333;
-            text-align: center;
+        /* Estilos para el Formulario */
+        .form-container {
+            background: #fff; /* Fondo blanco para que el form sea legible */
             border-radius: 10px;
+            overflow: hidden;
             margin-top: 30px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
         }
 
-        .cta-button {
-            display: block;
+        iframe {
             width: 100%;
-            padding: 20px;
-            background: var(--electric-blue);
-            color: white;
-            text-decoration: none;
-            text-align: center;
-            font-weight: 900;
-            font-size: 1.2rem;
-            border-radius: 8px;
-            transition: background 0.3s;
-        }
-
-        .cta-button:hover {
-            background: var(--accent-cyan);
-            color: var(--dark-bg);
+            border: none;
         }
 
         @keyframes pulse {
@@ -165,57 +154,70 @@
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1.1rem; }
             .hype-cards { grid-template-columns: 1fr; }
+            .container { margin-top: -30px; width: 90%; }
         }
     </style>
 </head>
 <body>
 
     <section class="hero-section">
-        <div class="badge">DÍA DEL ESTUDIANTE 2026</div>
+        <div class="badge">DÍA DEL ESTUDIANTE</div>
         <h1>EL RIVAL MÁS DÉBIL</h1>
-        <p class="subtitle">¿Tienes lo que se necesita para no ser eliminado?</p>
-        <p style="max-width: 600px; line-height: 1.6;">La competencia más despiadada llega a la Prepa. ¿Lograrás sobrevivir entre la lucha de conocimientos más grande de todos los tiempos?</p>
+        <p class="subtitle">¿Quién tiene el conocimiento? ¿Quién tiene la estrategia?</p>
+        <p style="max-width: 600px; line-height: 1.6; padding: 0 20px;">
+            La competencia más electrizante de la Prepa está aquí. No es solo lo que sabes, es a quién decides eliminar.
+        </p>
     </section>
 
     <div class="container">
-        <h2 class="section-title">Sobre el Torneo</h2>
-        <p style="text-align: center;">Olvida los exámenes aburridos. Esto es supervivencia intelectual.</p>
+        <h2 class="section-title">Dinámica del Concurso</h2>
         
         <div class="hype-cards">
             <div class="card">
-                <h3>🧠 No es solo Cultura General</h3>
-                <p>Desde los hitos de la historia hasta los memes más virales, tendencias de TikTok y la música del momento. Si no estás al día, estás fuera.</p>
+                <h3>🧪 Más que Libros</h3>
+                <p>Preguntas de cultura general, pero también de <b>cultura pop actual</b>: música, tendencias, redes sociales y el mundo real.</p>
             </div>
             <div class="card">
-                <h3>🤝 Traición y Estrategia</h3>
-                <p>En cada ronda, tú decides quién se va. ¿Eliminarás al más fuerte para ganar al final o al más débil para asegurar la banca?</p>
+                <h3>⚡ Tensión Total</h3>
+                <p>Responder bajo presión es difícil. Votar por tus compañeros para que abandonen el juego es aún peor. ¿Te atreves?</p>
             </div>
         </div>
 
         <div class="prize-box">
-            🎁 PREMIO SORPRESA DE ALTO NIVEL 🎁
-            <div style="font-size: 1rem; font-weight: 400; text-transform: uppercase;">Solo el ganador absoluto se lo lleva todo</div>
+            🏆 PREMIO SORPRESA DE ALTO IMPACTO 🏆
+            <div style="font-size: 0.9rem; font-weight: 400; text-transform: uppercase; margin-top: 10px;">
+                Solo uno se llevará la gloria... y el botín.
+            </div>
         </div>
 
-        <h2 class="section-title">Inscripciones</h2>
-        <p style="text-align: center;">¿Estás listo para enfrentar el juicio de tus compañeros? Llena el formulario a continuación y asegura tu lugar en el podio. <b>Cupos limitados.</b></p>
+        <h2 class="section-title">Inscríbete Ahora</h2>
+        <p style="text-align: center; margin-bottom: 30px;">
+            Completa el registro oficial para participar en el proceso de selección. 
+            <br><span style="color: var(--accent-cyan);">Cupos de competencia limitados.</span>
+        </p>
 
-        <!-- ESPACIO PARA EL FORMULARIO DE GOOGLE -->
-        <div class="form-placeholder">
-            <p style="color: #666;"></p>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScYW472V4uL0T4DO5An_mAGHY_F69S9gHu5MJNBu9wBeqnAEQ/viewform?embedded=true" width="100" height="1532" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-            -->
+        <!-- FORMULARIO DE GOOGLE INTEGRADO -->
+        <div class="form-container">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLScYW472V4uL0T4DO5An_mAGHY_F69S9gHu5MJNBu9wBeqnAEQ/viewform?embedded=true" 
+                height="1200" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+                Cargando…
+            </iframe>
         </div>
 
-        <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--accent-cyan);">
-            La fecha oficial será anunciada próximamente. Prepárate.
+        <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--accent-cyan); font-weight: bold;">
+            "Tú eres el rival más débil... ¡Adiós!"
         </p>
     </div>
 
-    <footer style="text-align: center; padding: 20px; color: #555; font-size: 0.8rem;">
-        EL RIVAL MÁS DÉBIL | EDICIÓN ESPECIAL PREPARATORIA DE LA SANTA CRUZ | 2026
+    <footer style="text-align: center; padding: 40px 20px; color: #555; font-size: 0.8rem;">
+        EL RIVAL MÁS DÉBIL | EDICIÓN PREPARATORIA | MÉXICO 2026
     </footer>
 
 </body>
