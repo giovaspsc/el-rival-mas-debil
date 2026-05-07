@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rival Más Débil - Edición Prepa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #050a14;
+            --electric-blue: #007bff;
+            --deep-blue: #001a3d;
+            --accent-cyan: #00f2ff;
+            --text-white: #f0f0f0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            height: 90vh;
+            background: radial-gradient(circle at center, var(--deep-blue) 0%, var(--dark-bg) 80%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid var(--electric-blue);
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(rgba(0,0,0,0.5), transparent), 
+                        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 123, 255, 0.05) 3px);
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: -2px;
+            text-shadow: 0 0 20px rgba(0, 242, 255, 0.6);
+            animation: pulse 2s infinite alternate;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            background: var(--electric-blue);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px var(--electric-blue);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -50px auto 50px;
+            padding: 20px;
+            background: rgba(0, 26, 61, 0.9);
+            border: 1px solid var(--electric-blue);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 242, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .hype-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-left: 4px solid var(--accent-cyan);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .card h3 { margin-top: 0; color: var(--electric-blue); }
+
+        .prize-box {
+            background: linear-gradient(45deg, #ffd700, #ff8c00);
+            color: black;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: 900;
+            font-size: 1.8rem;
+            margin: 40px 0;
+            animation: glow 1.5s infinite;
+        }
+
+        .form-placeholder {
+            background: #000;
+            padding: 40px;
+            border: 2px dashed #333;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: var(--electric-blue);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-cyan);
+            color: var(--dark-bg);
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); opacity: 0.9; }
+            to { transform: scale(1.05); opacity: 1; }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px #ffd700; }
+            50% { box-shadow: 0 0 25px #ffd700; }
+            100% { box-shadow: 0 0 5px #ffd700; }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .hype-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="badge">DÍA DEL ESTUDIANTE 2026</div>
+        <h1>EL RIVAL MÁS DÉBIL</h1>
+        <p class="subtitle">¿Tienes lo que se necesita para no ser eliminado?</p>
+        <p style="max-width: 600px; line-height: 1.6;">La competencia más despiadada llega a la Prepa. Una batalla de conocimiento, estrategia y nervios de acero.</p>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Sobre el Torneo</h2>
+        <p style="text-align: center;">Olvida los exámenes aburridos. Esto es supervivencia intelectual.</p>
+        
+        <div class="hype-cards">
+            <div class="card">
+                <h3>🧠 No es solo Cultura General</h3>
+                <p>Desde los hitos de la historia hasta los memes más virales, tendencias de TikTok y la música del momento. Si no estás al día, estás fuera.</p>
+            </div>
+            <div class="card">
+                <h3>🤝 Traición y Estrategia</h3>
+                <p>En cada ronda, tú decides quién se va. ¿Eliminarás al más fuerte para ganar al final o al más débil para asegurar la banca?</p>
+            </div>
+        </div>
+
+        <div class="prize-box">
+            🎁 PREMIO SORPRESA DE ALTO NIVEL 🎁
+            <div style="font-size: 1rem; font-weight: 400; text-transform: uppercase;">Solo el ganador absoluto se lo lleva todo</div>
+        </div>
+
+        <h2 class="section-title">Inscripciones</h2>
+        <p style="text-align: center;">¿Estás listo para enfrentar el juicio de tus compañeros? Llena el formulario a continuación y asegura tu lugar en el podio. <b>Cupos limitados.</b></p>
+
+        <!-- ESPACIO PARA EL FORMULARIO DE GOOGLE -->
+        <div class="form-placeholder">
+            <p style="color: #666;">[ PEGA AQUÍ TU IFRAME DE GOOGLE FORMS ]</p>
+            <!-- 
+            Instrucciones para el usuario:
+            Sustituye este div por el código que te da Google Forms (Enviar > <> )
+            Asegúrate de ajustar el width="100%" en el iframe de Google.
+            -->
+        </div>
+
+        <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--accent-cyan);">
+            La fecha oficial será anunciada próximamente. Prepárate.
+        </p>
+    </div>
+
+    <footer style="text-align: center; padding: 20px; color: #555; font-size: 0.8rem;">
+        EL RIVAL MÁS DÉBIL | EDICIÓN ESPECIAL PREPARATORIA | 2026
+    </footer>
+
+</body>
+</html>
